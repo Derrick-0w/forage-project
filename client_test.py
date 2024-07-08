@@ -33,8 +33,8 @@ class ClientTest(unittest.TestCase):
         a_prices = [5, 9, 20, 100, 2000]
         b_price = 0
         for i in a_prices:
-            with self.assertRaises(ZeroDivisionError):
-                getRatio(i, b_price)
+            self.assertRaises(ZeroDivisionError, getRatio, i, b_price)
+              
 
 if __name__ == '__main__':
     unittest.main()
